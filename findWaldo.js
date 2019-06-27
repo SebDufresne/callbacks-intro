@@ -1,10 +1,10 @@
 // The second argument/parameter is expected to be a (callback) function
 const findWaldo = function(names, found) {
-  for (let i = 0; i < names.length; i++) {
-    if (names[i] === "Waldo") {
-      found(names[i],i);   // execute callback
+  names.forEach((name, index) => {
+    if (names[index] === "Waldo") {
+      found(names[index],index);   // execute callback
     }
-  }
+  });
 };
 
 const actionWhenFound = function(name, index) {
